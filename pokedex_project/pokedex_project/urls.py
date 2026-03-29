@@ -19,7 +19,11 @@ from django.urls import path
 from pokeapp import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('catch/<str:pokemon_name>/', views.fetch_pokemon, name='fetch_pokemon'),
-]
 
+    path('pokemon/search/<str:pokemon_name>/', views.fetch_pokemon, name='fetch_pokemon'),
+    path('pokemon/catch/<str:pokemon_name>/', views.catch_pokemon, name='catch_pokemon'),
+    path('', views.gallery, name='gallery'),
+    path('party/', views.party, name='party'),
+    path('search/', views.search_pokemon, name='search_pokemon'),
+
+]

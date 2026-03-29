@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Press Start 2P', system-ui, sans-serif;
+    background: url('../images/download\ \(1\).jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Hide scrollbar completely but keep functionality */
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+/* Navigation Bar */
+nav {
+    background: transparent;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 1.8rem;
+    color: #ffcb05;
+    -webkit-text-stroke: 1px #3b4cca;
+    /* Classic Pokemon Blue */
+    text-shadow: 3px 3px 0 #3b4cca;
+    text-decoration: none;
+    transition: 0.3s;
+    letter-spacing: 2px;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-pokeball {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 2px solid #3b4cca;
+    transition: 0.3s;
+}
+
+.logo:hover .nav-pokeball {
+    transform: rotate(360deg);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #3b4cca;
+    font-size: 0.8rem;
+    /* Scaled down since Press Start 2P is wide */
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    background: #eef2ff;
+    border-color: #3b4cca;
+    color: #3b4cca;
+    transform: translateY(-2px);
+}
+
+.nav-links a.active {
+    background: #ffcb05;
+    border-color: #3b4cca;
+    color: #3b4cca;
+}
+
+/* Content Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Pokemon Solid', sans-serif;
+    color: #ffcb05;
+    -webkit-text-stroke: 1px #3b4cca;
+    margin-bottom: 40px;
+    font-size: 3.5rem;
+    text-shadow: 4px 4px 0 #3b4cca;
+    letter-spacing: 3px;
+}
+
+.header-icon {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    margin-right: 15px;
+    border-radius: 50%;
+    border: 3px solid #3b4cca;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

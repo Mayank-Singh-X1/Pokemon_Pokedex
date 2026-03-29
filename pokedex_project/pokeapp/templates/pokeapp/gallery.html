@@ -1,0 +1,76 @@
+{% extends 'pokeapp/base.html' %}
+{% load static %}
+
+{% block title %}Gallery - Pokédex{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'pokeapp/css/gallery.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1><img src="{% static 'pokeapp/images/pikachu.jpg' %}" alt="Pikachu" class="header-icon"> Pokémon Gallery</h1>
+
+<div class="pokemon-grid">
+    <!-- Manually add your 50 Pokémon here -->
+
+    <div class="pokemon-card">
+        <div class="pokemon-id">#001</div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur">
+        <div class="pokemon-name">Bulbasaur</div>
+        <span class="pokemon-type type-grass">Grass</span>
+    </div>
+
+    <div class="pokemon-card">
+        <div class="pokemon-id">#004</div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Charmander">
+        <div class="pokemon-name">Charmander</div>
+        <span class="pokemon-type type-fire">Fire</span>
+    </div>
+
+    <div class="pokemon-card">
+        <div class="pokemon-id">#007</div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Squirtle">
+        <div class="pokemon-name">Squirtle</div>
+        <span class="pokemon-type type-water">Water</span>
+    </div>
+
+    <div class="pokemon-card">
+        <div class="pokemon-id">#025</div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+        <div class="pokemon-name">Pikachu</div>
+        <span class="pokemon-type type-electric">Electric</span>
+    </div>
+
+    <div class="pokemon-card">
+        <div class="pokemon-id">#006</div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" alt="Charizard">
+        <div class="pokemon-name">Charizard</div>
+        <span class="pokemon-type type-fire">Fire</span>
+    </div>
+
+    <div class="pokemon-card">
+        <div class="pokemon-id">#009</div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png" alt="Blastoise">
+        <div class="pokemon-name">Blastoise</div>
+        <span class="pokemon-type type-water">Water</span>
+    </div>
+
+    <div class="pokemon-card">
+        <div class="pokemon-id">#150</div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png" alt="Mewtwo">
+        <div class="pokemon-name">Mewtwo</div>
+        <span class="pokemon-type type-psychic">Psychic</span>
+    </div>
+
+    <div class="pokemon-card">
+        <div class="pokemon-id">#133</div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png" alt="Eevee">
+        <div class="pokemon-name">Eevee</div>
+        <span class="pokemon-type type-normal">Normal</span>
+    </div>
+
+    <!-- Add 42 more Pokémon cards like above... -->
+    <!-- Just copy-paste and change the numbers/names -->
+
+</div>
+{% endblock %}

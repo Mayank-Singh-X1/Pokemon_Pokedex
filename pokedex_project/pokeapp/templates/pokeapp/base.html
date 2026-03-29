@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Pokédex{% endblock %}</title>
+    <!-- Pokemon Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'pokeapp/css/base.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="{% url 'gallery' %}" class="logo"><img src="{% static 'pokeapp/images/pokeball.jpg' %}" alt="Pokeball" class="nav-pokeball"> Pokédex</a>
+            <ul class="nav-links">
+                <li><a href="{% url 'gallery' %}" class="{% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">Gallery</a></li>
+                <li><a href="{% url 'party' %}" class="{% if request.resolver_match.url_name == 'party' %}active{% endif %}">My Party</a></li>
+                <li><a href="{% url 'search_pokemon' %}" class="{% if request.resolver_match.url_name == 'search_pokemon' %}active{% endif %}">Search</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

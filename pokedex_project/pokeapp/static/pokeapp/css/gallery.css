@@ -1,0 +1,161 @@
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+    max-height: calc(100vh - 280px);
+    /* Height remaining under navbar and h1 */
+    overflow-y: auto;
+    /* Internal scrolling */
+    padding:10px;
+    padding-top: 20px;
+    border-radius: 20px;
+    background: rgba(126, 125, 125, 0.574);
+}
+
+/* Optional: style the internal scrollbar to look good but keep it thin */
+.pokemon-grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.pokemon-grid::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+.pokemon-grid::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.pokemon-card {
+    background: rgba(255, 255, 255, 0.288);
+    backdrop-filter: blur(8px);
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    border-color: #ffcb05;
+    /* Pokemon Yellow */
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.pokemon-card img {
+    width: 130px;
+    height: 130px;
+    image-rendering: pixelated;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+}
+
+.pokemon-card:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.pokemon-id {
+    color: #000000;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.pokemon-name {
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 1.8rem;
+    color: #000000;
+    -webkit-text-stroke: 1px #ffe95c;
+    margin: 15px 0;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.pokemon-type {
+    display: inline-block;
+    padding: 8px 15px;
+    color: white;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+/* Original Bright Type Colors */
+.type-fire {
+    background: #F08030;
+}
+
+.type-water {
+    background: #6890F0;
+}
+
+.type-grass {
+    background: #78C850;
+}
+
+.type-electric {
+    background: #F8D030;
+    color: #333;
+}
+
+.type-psychic {
+    background: #F85888;
+}
+
+.type-normal {
+    background: #A8A878;
+}
+
+.type-fighting {
+    background: #C03028;
+}
+
+.type-flying {
+    background: #A890F0;
+}
+
+.type-poison {
+    background: #A040A0;
+}
+
+.type-ground {
+    background: #E0C068;
+}
+
+.type-rock {
+    background: #B8A038;
+}
+
+.type-bug {
+    background: #A8B820;
+}
+
+.type-ghost {
+    background: #705898;
+}
+
+.type-steel {
+    background: #B8B8D0;
+}
+
+.type-dragon {
+    background: #7038F8;
+}
+
+.type-dark {
+    background: #705848;
+}
+
+.type-fairy {
+    background: #EE99AC;
+}
