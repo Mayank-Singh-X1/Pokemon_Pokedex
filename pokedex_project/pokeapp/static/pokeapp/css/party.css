@@ -43,7 +43,7 @@
 .pokemon-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-    border-color: #ffcb05;
+    border-color: #ff0000;
     /* Pokemon Yellow */
     background: rgba(255, 255, 255, 0.95);
 }
